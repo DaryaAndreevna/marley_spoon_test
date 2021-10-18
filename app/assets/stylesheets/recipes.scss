@@ -8,6 +8,8 @@ body {
 }
 
 a {
+  color: #222;
+
   &:active, &:hover, &:visited { color: #111; }
 }
 

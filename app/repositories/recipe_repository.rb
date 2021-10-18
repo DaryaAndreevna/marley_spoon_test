@@ -3,11 +3,19 @@
 class RecipeRepository
   attr_reader :record
 
-  def self.find(id)
-    new(id: id).build
+  class MissingArguments < StandardError
+    def message
+      "Either ID or Recipe Record returned from Client must present"
+    end
+  end
+
+  def self.find(id, client: ContentfulClient.instance)
+    new(id: id, client: client).build
   end
 
   def initialize(id: nil, record: nil, client: ContentfulClient.instance)
+    raise MissingArguments unless id || record
+
     @record = record || client.recipe(id)
   end
 

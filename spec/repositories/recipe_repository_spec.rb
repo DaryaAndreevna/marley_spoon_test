@@ -37,6 +37,19 @@ RSpec.describe RecipeRepository do
           end
         end
       end
+
+      context "when no ID or record passed" do
+        let(:params) { {} }
+
+        describe "#build" do
+          it "raises error" do
+            expect{ recipe_repository.build }.to raise_error(
+              RecipeRepository::MissingArguments,
+              "Either ID or Recipe Record returned from Client must present"
+            )
+          end
+        end
+      end
     end
 
     describe ".find" do

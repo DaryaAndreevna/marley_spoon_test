@@ -1,24 +1,36 @@
-# README
+# Marley Spoon Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small application to consume the data from [Contentful](https://www.contentful.com/) (Content Delivery API) and display it.
 
-Things you may want to cover:
 
-* Ruby version
+### Preview of all recipes
 
-* System dependencies
+![2021-10-18_20-38-20](https://user-images.githubusercontent.com/4205473/137780432-adf82975-2a05-4904-837e-068ed78ee499.png)
 
-* Configuration
 
-* Database creation
+### The data for a recipe
 
-* Database initialization
+![2021-10-18_20-38-34](https://user-images.githubusercontent.com/4205473/137780454-fd2efbc3-73c1-41fc-b1ba-3bffa253f495.png)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Configuration
 
-* Deployment instructions
 
-* ...
+- Clone the repo
+- Set credentials
+
+```
+EDITOR="vi" rails credentials:edit
+```
+
+```
+contentful:
+  space: SPACE_ID
+  access_token: ACCESS_TOKEN
+```
+
+### Tests
+      
+```
+rspec
+```

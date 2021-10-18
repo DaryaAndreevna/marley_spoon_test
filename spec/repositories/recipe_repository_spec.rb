@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Repositories::Recipe do
+RSpec.describe RecipeRepository do
   subject(:recipe_repository) { described_class.new(**params) }
 
   let(:recipe) { build(:recipe) }
@@ -16,15 +16,15 @@ RSpec.describe Repositories::Recipe do
         let(:params) { { id: recipe.id, client: client } }
 
         it "returns recipe entry" do
-          expect(recipe_repository.build).to be_kind_of(Entries::Recipe)
+          expect(recipe_repository.build).to be_kind_of(RecipeEntry)
         end
 
         it "contains all included entries" do
           entry = recipe_repository.build
 
-          expect(entry.photo).to be_kind_of(Entries::Photo)
-          expect(entry.chef).to be_kind_of(Entries::Chef)
-          expect(entry.tags).to all(be_kind_of(Entries::Tag))
+          expect(entry.photo).to be_kind_of(PhotoEntry)
+          expect(entry.chef).to be_kind_of(ChefEntry)
+          expect(entry.tags).to all(be_kind_of(TagEntry))
         end
       end
 
@@ -33,7 +33,7 @@ RSpec.describe Repositories::Recipe do
 
         describe "#build" do
           it "returns recipe entry" do
-            expect(recipe_repository.build).to be_kind_of(Entries::Recipe)
+            expect(recipe_repository.build).to be_kind_of(RecipeEntry)
           end
         end
       end

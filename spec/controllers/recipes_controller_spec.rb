@@ -5,7 +5,7 @@ RSpec.describe RecipesController, type: :controller do
     let(:recipes) { build_list(:recipe, 4) }
 
     before do
-      allow(Repositories::Recipes).to receive(:all).and_return(recipes)
+      allow(RecipesRepository).to receive(:all).and_return(recipes)
 
       get :index
     end
@@ -15,7 +15,7 @@ RSpec.describe RecipesController, type: :controller do
     end
 
     it "calls repository" do
-      expect(Repositories::Recipes).to have_received(:all)
+      expect(RecipesRepository).to have_received(:all)
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.describe RecipesController, type: :controller do
     let(:recipe) { build :recipe }
 
     before do
-      allow(Repositories::Recipe).to receive(:find).and_return(recipe)
+      allow(RecipeRepository).to receive(:find).and_return(recipe)
 
       get :show, params: { id: recipe.id }
     end
@@ -33,7 +33,7 @@ RSpec.describe RecipesController, type: :controller do
     end
 
     it "calls repository" do
-      expect(Repositories::Recipe).to have_received(:find)
+      expect(RecipeRepository).to have_received(:find)
     end
   end
 end

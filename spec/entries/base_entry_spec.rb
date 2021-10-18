@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Entries::Base do
+RSpec.describe BaseEntry do
   subject(:base) { described_class.new(params) }
 
   expected_fields = %i[some_field another_field]

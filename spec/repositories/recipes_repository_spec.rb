@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Repositories::Recipes do
+RSpec.describe RecipesRepository do
   subject(:recipes_repository) { described_class.new(**params) }
 
   let(:params) { { client: client } }
@@ -12,7 +12,7 @@ RSpec.describe Repositories::Recipes do
 
     describe "#build" do
       it "returns recipes collection" do
-        expect(recipes_repository.build).to all(be_kind_of(Entries::Recipe))
+        expect(recipes_repository.build).to all(be_kind_of(RecipeEntry))
       end
 
       context "when included entries are passed" do
@@ -21,7 +21,7 @@ RSpec.describe Repositories::Recipes do
         it "returns recipes collection with included entries" do
           recipes_collection = recipes_repository.build(includes: included_entries)
 
-          expect(recipes_collection.first.photo).to be_kind_of(Entries::Photo)
+          expect(recipes_collection.first.photo).to be_kind_of(PhotoEntry)
         end
       end
     end

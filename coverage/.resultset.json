@@ -30,6 +30,8 @@
       },
       "/Users/dariakarazayeva/projects/marley_spoon_test/app/controllers/recipes_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           2,
@@ -43,13 +45,30 @@
       },
       "/Users/dariakarazayeva/projects/marley_spoon_test/app/controllers/application_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/entries/base.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/entries/base_entry.rb": {
         "lines": [
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           1,
           5,
@@ -70,22 +89,22 @@
           29,
           null,
           null,
-          null,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/entries/chef.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/entries/chef_entry.rb": {
         "lines": [
-          1,
-          1,
-          1,
           null,
+          null,
+          1,
+          1,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/entries/photo.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/entries/photo_entry.rb": {
         "lines": [
-          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -108,36 +127,36 @@
           1,
           3,
           null,
-          null,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/entries/recipe.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/entries/recipe_entry.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
           null,
           null,
           1,
+          1,
           null,
+          null,
+          null,
+          null,
+          1,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/entries/tag.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/entries/tag_entry.rb": {
         "lines": [
-          1,
-          1,
-          1,
           null,
+          null,
+          1,
+          1,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/repositories/recipe.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/repositories/recipe_repository.rb": {
         "lines": [
-          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -182,13 +201,13 @@
           3,
           null,
           null,
-          null,
           null
         ]
       },
-      "/Users/dariakarazayeva/projects/marley_spoon_test/app/contentful/repositories/recipes.rb": {
+      "/Users/dariakarazayeva/projects/marley_spoon_test/app/repositories/recipes_repository.rb": {
         "lines": [
-          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -205,11 +224,10 @@
           2,
           null,
           null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1634572994
+    "timestamp": 1634574566
   }
 }

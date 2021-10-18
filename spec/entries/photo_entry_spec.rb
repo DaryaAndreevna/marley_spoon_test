@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe Entries::Photo do
-  subject(:photo) { Entries::Photo.new(file: file) }
+RSpec.describe PhotoEntry do
+  subject(:photo) { described_class.new(file: file) }
 
   let(:file) { instance_double "Photo File", { url: "//file.png" } }
   let(:expected_fields) { %i[file] }
@@ -11,7 +11,7 @@ RSpec.describe Entries::Photo do
   end
 
   it "inherits from Base" do
-    expect(described_class).to be < Entries::Base
+    expect(described_class).to be < BaseEntry
   end
 
   describe "#url" do

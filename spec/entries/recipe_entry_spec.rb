@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Entries::Recipe do
+RSpec.describe RecipeEntry do
   subject(:recipe) { build(:recipe) }
 
   let(:expected_fields) { %i[id title calories description] }
@@ -15,6 +15,6 @@ RSpec.describe Entries::Recipe do
   end
 
   it "inherits from Base" do
-    expect(described_class).to be < Entries::Base
+    expect(described_class).to be < BaseEntry
   end
 end

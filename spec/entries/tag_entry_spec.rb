@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe Entries::Chef do
-  subject(:chef) { build(:chef) }
+RSpec.describe TagEntry do
+  subject(:tag) { build(:tag) }
 
   let(:expected_fields) { %i[name] }
 
@@ -10,6 +10,6 @@ RSpec.describe Entries::Chef do
   end
 
   it "inherits from Base" do
-    expect(described_class).to be < Entries::Base
+    expect(described_class).to be < BaseEntry
   end
 end

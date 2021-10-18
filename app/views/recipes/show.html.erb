@@ -3,7 +3,7 @@
 <section class="recipe">
   <div class="recipe__content">
     <div class="recipe__image">
-      <img src="<%= contentful_image(@recipe.photo.file.url, {w: 500}) %>"></img>
+      <img src="<%= @recipe.photo.url(:medium) %>"></img>
     </div>
 
     <aside class="recipe__aside">

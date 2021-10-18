@@ -1,0 +1,110 @@
+body {
+  font-family: system-ui;
+  line-height: 1.6em;
+  color: #333;
+  padding: 2em;
+
+  section { padding: 0.5em 0; }
+}
+
+a {
+  &:active, &:hover, &:visited { color: #111; }
+}
+
+.recipe {
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__image {
+    flex: 0 0 40%;
+    min-width: 300px;
+
+    img { width: 100%; }
+  }
+  &__aside {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+
+  &__description {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    text-align: justify;
+
+    p { margin-bottom: 0; }
+  }
+
+  &__chef {
+    font-style: italic;
+
+    h4 { margin: 0; }
+  }
+
+  &__badge {
+    background-color: black;
+    padding: 0.25em 0.5em;
+    margin: 0.25em;
+    color: white;
+    display: inline-block;
+
+    &--tag { background-color: rosybrown; }
+    &--cals { background-color: cadetblue; }
+  }
+}
+
+.recipes {
+  max-width: 1280px;
+  margin: auto;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+  }
+
+  &__item {
+    width: 25%;
+    min-width: 270px;
+    display: flex;
+
+    a { text-decoration: none; }
+  }
+}
+
+.recipe-card {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid #eee;
+  margin: 1em;
+
+  &:hover, &:active {
+    background-color: rgba(0,0,0,0.02);
+
+    img { transform: scale(1.05); }
+  }
+
+  &__image {
+    overflow: hidden;
+    flex: 0 0 50%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform .2s;
+
+    }
+  }
+
+  &__description {
+    flex-grow: 1;
+    padding: 1em;
+  }
+}

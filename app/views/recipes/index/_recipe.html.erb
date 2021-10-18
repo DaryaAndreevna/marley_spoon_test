@@ -1,0 +1,9 @@
+<%= link_to recipe_path(recipe.id), class: "recipe-card" do %>
+  <div class="recipe-card__image">
+    <img src="<%= contentful_image(recipe.photo.file.url, {w: 300}) %>"></img>
+  </div>
+
+  <div class="recipe-card__description">
+    <h4><%= recipe.title %></h4>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<h1> Recipes </h1>
+
+<section class="recipes">
+  <ul class="recipes__list">
+    <% @recipes.each do |recipe| %>
+      <li class="recipes__item">
+        <%= render partial: "recipes/index/recipe", locals: { recipe: recipe } %>
+      </li>
+    <% end %>
+
+  <ul>
+</section>

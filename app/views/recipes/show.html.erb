@@ -1,0 +1,28 @@
+<h1> Recipe </h1>
+
+<section class="recipe">
+  <div class="recipe__content">
+    <div class="recipe__image">
+      <img src="<%= contentful_image(@recipe.photo.file.url, {w: 500}) %>"></img>
+    </div>
+
+    <aside class="recipe__aside">
+      <h2 class="recipe__title"><%= @recipe.title %></h2>
+
+      <section class="recipe__subtitle">
+        <%= render partial: "recipes/show/calories", locals: { calories: @recipe.calories } %>
+        <%= render partial: "recipes/show/tags", locals: { tags: @recipe.tags } %>
+      </section>
+
+      <section class="recipe__description">
+        <%= render partial: "recipes/show/description", locals: { description: @recipe.description } %>
+      </section>
+
+      <section class="recipe__chef">
+        <%= render partial: "recipes/show/chef", locals: { chef: @recipe.chef } %>
+      </section>
+    </aside>
+  </div>
+</section>
+
+<%= link_to " << Back", recipes_path %>

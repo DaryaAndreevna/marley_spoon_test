@@ -1,0 +1,5 @@
+<% return if tags.empty? %>
+
+<% tags.each do |tag| %>
+  <span class="recipe__badge recipe__badge--tag "><%= tag.name %></span>
+<% end %>

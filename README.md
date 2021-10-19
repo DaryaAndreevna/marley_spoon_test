@@ -43,6 +43,11 @@ contentful:
 rails server
 ```
 
+- In case it's needed run:
+```
+bin/rails webpacker:install
+```
+
 ### Tests
       
 ![2021-10-18_20-54-22](https://user-images.githubusercontent.com/4205473/137782421-532aeadf-ac84-4d05-a1ad-a70f77c36324.png)
